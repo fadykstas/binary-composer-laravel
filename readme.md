@@ -1,27 +1,85 @@
-# Laravel PHP Framework
+## Academy 2018 • .CI/CD/Docker
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+https://github.com/fadykstas/binary-composer-laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+### Критерии оценивания:
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+- Наличие docker-compose.yml,
 
-## Official Documentation
+https://github.com/fadykstas/binary-composer-laravel/blob/master/docker-compose.yml
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+- Наличие Dockerfile,
 
-## Contributing
+https://github.com/fadykstas/binary-composer-laravel/blob/master/app.dockerfile
+https://github.com/fadykstas/binary-composer-laravel/blob/master/web.dockerfile
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+- Наличие образа на Docker Hub
 
-## Security Vulnerabilities
+cостоит из трех образов сервисов app, web & DB:
+https://hub.docker.com/r/fadykstas/binary-composer-laravel_app/
+https://hub.docker.com/r/fadykstas/binary-composer-laravel_web/
+https://hub.docker.com/r/fadykstas/mysql/
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+- Работоспособность образа (запуск проекта должен осуществляться только средствами docker cli)
 
-## License
+Запускается через - docker-compose up и доступен по адресу http://0.0.0.0:8080/**
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+- Логичность использования базового образа (например, если у Вас нет серверной части, а только статические файлы можно обойтись только nginx, без всяких node`ов и так далее)
+
+**Дополнительно можно, но не обязательно (и на оценку не влияет):**
+
+Запустить docker-образ Jenkins + Blueocean и попробовать настроить Continuous Deployment
+
+Попробовать использовать docker volumes.
+
+Задеплоить проект на Heroku или любой другой сервис по Вашему усмотрению.
+
+### Полезные ссылки
+
+Презентация лекции: https://docs.google.com/presentation/d/1dg3-kpOmbnZUHK-ZOVp_l9dCAYNvCotesXZZNq5-Zng/edit?usp=sharing
+
+**Репозиторий примера из лекции**: https://bitbucket.org/oleksandrkovalov/dockertest/src/master/
+
+https://jenkins.io/doc/book/blueocean/getting-started/
+
+https://developer.atlassian.com/blog/2016/06/common-dockerfile-mistakes/
+
+https://blog.jez.io/2015/07/12/docker-tips-and-cheatsheet/
+
+</div>
+
+</div>
+
+<div class="answer-link-wrapper"><md-input-container class="md-link-container"><label class="ng-binding" for="input_0"></label><input type="text" name="link" ng-model="hometaskInfo.lecture.githubLink" class="input-link ng-pristine ng-untouched ng-valid md-input ng-empty" id="input_0" aria-invalid="false" style=""></md-input-container></div>
+
+<div class="answer-text-field row"><label class="answer-text-title ng-binding"></label><textarea ng-model="hometaskInfo.lecture.textAnswer" class="text-answer ng-pristine ng-untouched ng-valid ng-empty" aria-invalid="false"></textarea></div>
+
+<button ng-click="hometaskInfo.saveHometaskAnswer(hometaskInfo)" ng-disabled="hometaskInfo.lecture.isAnswered || hometaskInfo.lecture.timeIsOver" class="button button-blue big-button ng-binding"></button></div>
+
+<div class="hometask-result ng-scope">
+
+<div class="hometask-description">
+
+
+<div btf-markdown="hometaskInfo.lecture.hometaskId.text" class="markdown-body task-body">
+
+## CI/CD/Docker
+
+### Шаги выполнения:
+
+Установить Docker CE. Если возникают проблемы в первую очередь проверьте наличие включенной виртуализации в BIOS, а также если вы используете Windows - необходимых компонент системы и т.д. (https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install) Если ничего не помогает - установите Docker в UNIX-based виртуалке =)
+
+Зарегистрируйтесь на Docker Hub
+
+Выберите любой Ваш проект, которым Вы готовы поделиться с миром.
+
+
+Создать образ, который будет содержать Ваш проект. Здесь имеется в виду Dockerfile с необходимыми командами.
+
+Запушить Ваш контейнер на Docker Hub.
+
+Создать Docker-compose файл.
+
+Отослать docker-compose.yml и Dockerfile мне любым способом и дать ссылку на Docker-hub с вашим образом.
+
+Получить 10 =)
