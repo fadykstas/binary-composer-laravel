@@ -56,7 +56,7 @@ https://blog.jez.io/2015/07/12/docker-tips-and-cheatsheet/
 
 <div class="answer-link-wrapper"><md-input-container class="md-link-container"><label class="ng-binding" for="input_0"></label><input type="text" name="link" ng-model="hometaskInfo.lecture.githubLink" class="input-link ng-pristine ng-untouched ng-valid md-input ng-empty" id="input_0" aria-invalid="false" style=""></md-input-container></div>
 
-<div class="answer-text-field row"><label class="answer-text-title ng-binding"></label><textarea ng-model="hometaskInfo.lecture.textAnswer" class="text-answer ng-pristine ng-untouched ng-valid ng-empty" aria-invalid="false"></textarea></div>
+<div class="answer-text-field row"><label class="answer-text-title ng-binding"></label></div>
 
 <button ng-click="hometaskInfo.saveHometaskAnswer(hometaskInfo)" ng-disabled="hometaskInfo.lecture.isAnswered || hometaskInfo.lecture.timeIsOver" class="button button-blue big-button ng-binding"></button></div>
 
