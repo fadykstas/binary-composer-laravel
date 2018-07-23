@@ -11,13 +11,17 @@ https://github.com/fadykstas/binary-composer-laravel/blob/master/docker-compose.
 - Наличие Dockerfile,
 
 https://github.com/fadykstas/binary-composer-laravel/blob/master/app.dockerfile
+
 https://github.com/fadykstas/binary-composer-laravel/blob/master/web.dockerfile
 
 - Наличие образа на Docker Hub
 
 cостоит из трех образов сервисов app, web & DB:
+
 https://hub.docker.com/r/fadykstas/binary-composer-laravel_app/
+
 https://hub.docker.com/r/fadykstas/binary-composer-laravel_web/
+
 https://hub.docker.com/r/fadykstas/mysql/
 
 - Работоспособность образа (запуск проекта должен осуществляться только средствами docker cli)
